@@ -59,7 +59,7 @@ const Home = ({ onPredict }) => {
     const values = Object.values(form).map(Number);
 
     try {
-      const res = await fetch("https://house-price-prediction-eepf.vercel.app/predict", {
+      const res = await fetch("https://boston-house-api.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features: values }),
